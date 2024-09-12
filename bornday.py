@@ -1,13 +1,19 @@
-correct_birth_year = 1799
-
-user_input_year = int(input("Введите год рождения А.С. Пушкина: "))
-
-if user_input_year != correct_birth_year:
-    print("Неверный год рождения")
-else:
-    user_input_day = int(input("Введите день рождения А.С. Пушкина: "))
-    correct_birth_day = 6
-    if user_input_day == correct_birth_day:
-        print("Верно")
+while True:
+    год_рождения = int(input("Введите год рождения А.С. Пушкина: "))
+    if год_рождения == 1799:
+        while True:
+            месяц_рождения = int(input("Введите месяц рождения А.С. Пушкина (числом от 1 до 12): "))
+            if месяц_рождения == 6:
+                while True:
+                    день_рождения = int(input("Введите день рождения А.С. Пушкина: "))
+                    if день_рождения == 6:
+                        print("Верно")
+                        break
+                    else:
+                        print("Неверный день рождения")
+                break
+            else:
+                print("Неверный месяц рождения")
+        break
     else:
-        print("Неверный день рождения")
+        print("Неверный год рождения")
